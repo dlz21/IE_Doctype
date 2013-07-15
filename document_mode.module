@@ -2,7 +2,7 @@
 /*
  * Implements hook_html_head_alter hook = module/theme
  */
-function ie_doctype_html_head_alter(&$head_elements) {
+function document_mode_html_head_alter(&$head_elements) {
   // Force IE9, IE8, or the latest IE rendering engine and Google Chrome Frame.
   $head_elements['chrome_frame'] = array(
     '#type' => 'html_tag',

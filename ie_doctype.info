@@ -1,4 +1,0 @@
-name = IE Doc Type Module
-description = "A Custom module that specifies IE document typ as IE9,IE8, IE Edge"
-core = 7.x
-files[] = ie_doctype.module
