@@ -1,4 +1,1 @@
-name = Document Mode
-description = "A Custom module that specifies the latest rendering engine for IE"
-core = 7.x
-files[] = document_mode.module
+"name = Document Mode" 
