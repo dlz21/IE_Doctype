@@ -1,10 +1,30 @@
 <?php
-/*
- * Implements hook_html_head_alter hook = module/theme
+
+/**
+ * @file 
+ * A module that forces IE to the latest rendering version.
+ * 
+ * This module ensures that a site is viewed in IE's latest rendering version.
+ * This can be useful if IE reads a website incorrectly in compatability mode under a lower version.
  */
+
+/**
+ * Implements hook_help().
+ */
+
+function document_mode_help($path, $arg) {
+  if ($path == 'admin/help#document_mode') {
+    return t('Enable this module to add an html tag to the sites head. This will force IE away from compatability mode into its latest rendering engine.');
+  }
+}
+
+/**
+ * Implements hook_html_head_alter.
+ */
+
 function document_mode_html_head_alter(&$head_elements) {
   // Force IE9, IE8, or the latest IE rendering engine and Google Chrome Frame.
-  $head_elements['chrome_frame'] = array(
+  $head_elements[''] = array(
     '#type' => 'html_tag',
     '#tag' => 'meta',
     '#attributes' => array('http-equiv' => 'X-UA-Compatible', 'content' => 'IE=9,IE=8,IE=edge,chrome=1'),
